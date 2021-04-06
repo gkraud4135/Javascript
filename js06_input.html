@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+	// 외부에서 문자열 입력받기
+	// 1. prompt() : 숫자로 입력해도 문자열로 인식
+	// 입력받은 값을 연산하기 위해 숫자형으로 변환 해야함
+	// 이 함수는 2개의 매개변수가 있다.
+	// prompt(String message, String 값) 
+	var num = prompt('숫자를 입력하세요!',100);
+/* 	alert(num);
+	alert(typeof(num)); 
+	num+=1000;
+	alert(num);	*/
+	
+	//2.Number(): 숫자형태인 문자열을 숫자로 변환
+ 	num=Number(num);
+	num+=1000;
+	alert(num); 
+	
+	//3. String(): 숫자형을 문자형으로 변환
+	num = String(num);
+	num+= 1000;
+	alert(num);
+	
+	//4. confirm(): boolean값을 입력받을 때 사용
+	var input = confirm('수락하겠습니까?')
+	//alert(input);
+	if (input=true){
+			alert('true입니다.')}
+	else {
+		alert('거짓입니다')
+	}
+	
+	
+	
+</script>
+
+
+
+</head>
+<body>
+
+</body>
+</html>

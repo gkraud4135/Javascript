@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+window.onload = function(){
+	/* alert('html이 메모리에 올라오면 자동으로 실행') */
+	
+	var list ='';
+	list += '<ul>';
+	list += '<li>html5</li>';
+	list += '<li>css</li>';
+	list += '<li>jQuery</li>';
+	list += '<li>Bootstrap</li>';
+	list += '</ul>';
+	
+	//문서(body)에 출력
+	var h1 = '<h1>Window.onload</h1>'
+	document.body.innerHTML = h1 + list;
+	
+}
+
+</script>
+<script>
+//typeof() : 자료형 확인
+alert(typeof('문자열'));
+alert(typeof(123));
+alert(typeof(123.45));
+alert(typeof(true));
+alert(typeof(function(){}));
+alert(typeof({}));
+alert(typeof(pi));
+</script>
+
+
+
+</head>
+<body>
+
+<!--  
+<ul>
+	<li class="ex1">html5</li>
+	<li class="ex2">css</li>
+	<li class="ex3">jQuery</li>
+	<li class="ex4">Bootstrap</li>
+</ul> 
+ -->
+
+
+</body>
+</html>
