@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+
+<script>
+//자료형변환함수
+//1. String
+var num = 100;
+var str1 = String(num);
+var str2 = String(200);
+var str3 = String('문자열');
+
+//2. number()
+var str = '100';
+var num1 = Number(str);
+var num2 = Number('200');
+var num3 = Number('200a');
+/* alert(num3); NaN*/
+
+//3.Boolean()
+alert('0은'+ Boolean(0));	//false
+alert('NaN은'+ Boolean(NaN)); //false
+alert('공백은'+ Boolean('')); //false
+alert('undefined는'+Boolean(undefined))//false
+
+alert('1은'+Boolean(1));//true  
+alert('-1은'+Boolean(-1));//true 0이외에 모두 true
+alert('100은'+Boolean(100));//true 0이외에 모두 true
+alert('false는'+Boolean('false'));// 데이터 타입이 아닌 문자열 true
+
+alert(''=false); //true
+alert(''=0); //true
+alert(0=false); //true
+alert('100'=100); //true
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

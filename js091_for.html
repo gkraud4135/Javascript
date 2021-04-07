@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- 
+<script>
+	//1~100까지 합
+	var sum = 0;
+	for(var i=1; i<=100; i++){
+		sum +=i;
+	}
+	alert('for:1~100까지의 합은'+sum);
+</script>
+<script>
+	var sum=0;
+	var i=0;
+	while(i<=100){
+		sum+=i;
+		i++;
+	}alert('while:1~100까지의 합은'+sum);
+</script>
+<script>
+//3. do while 적어도 한번은 실행되어야함
+	var sum=0;
+	var i=1;
+	do{
+		sum+=i;
+		i++
+	}while(i<=100);
+	alert('do while:1~100까지의 합은'+sum)
+</script>
+
+<script>
+// 중첩 for 문
+var list = '';
+for(var i=1; i<=3; i++){
+	for(var j=1; j<=3; j++){
+		list+='('+i+','+j+')'
+	}
+}alert()
+</script>
+
+
+
+<script>
+//구구단 출력
+var gugudan = '';
+for(var i=2; i<=9; i++){
+	for(var j=1; j<=9; j++){
+		alert(i+'단= '+i+'*'+j+'='+(i*j))}
+	}
+alert(gugudan);
+</script>
+ -->
+
+<script>
+//실습문제 1. 별찍기
+for(var i = 0; i < 5; i++)  {
+  for(var j=4; j > i; j--)  {
+    // space
+    document.write('&nbsp');
+  }
+  for(var j=0; j <= i; j++)  {
+    document.write('*');
+  }
+  document.write('<br>');
+}
+
+
+//실습문제 2. 135  8642
+for(var i=1; i<=5; i++){
+	for(var k=8; k>=i*2-2; k--){
+	document.write('&nbsp');
+	}
+	for(var j=1; j<=i*2-1; j++){
+	document.write("*");
+	}document.write('<br>');
+	}
+	
+	
+	
+document.write('<br>');
+
+
+
+
+//실습문제 3. 마름모
+for(var i = 0; i < 5; i++)  {
+  for(var j=4; j > i; j--)  {
+    // space
+    document.write('&nbsp');
+  }
+  for(var j=0; j <= i; j++)  {
+    document.write('*');
+  }
+  document.write('<br>');
+}
+for(var i = 0; i < 4; i++)  {
+	  for(var j=0; j <= i; j++)  {
+	    // space
+	    document.write('&nbsp');
+	  }
+	  for(var j=4; j > i; j--)  {
+	    document.write('*');
+	  }
+	  document.write('<br>');
+	}
+
+
+</script>
+
+<script>
+
+
+</script>
+
+<!-- 	<script>
+		// 1. for
+		// 1~100까지 합
+		var sum = 0;
+		for (var i=1; i<=100; i++) {
+			sum += i;
+		}
+		//alert('for : 1~100까지의 합은 ' + sum);
+	</script>
+	
+	<script>
+		// 2. while
+		var sum = 0;
+		var i = 1;
+		while(i<=100) {
+			sum += i;
+			i++;
+		}
+		//alert('while : 1~100까지의 합은 ' + sum);
+	</script>
+	
+	<script>
+		// 3. do while
+		var sum = 0;
+		var i = 1;
+		do {
+			sum += i;
+			i++
+		} while(i<=100);
+		//alert('do while : 1~100까지의 합은 ' + sum);
+	</script>
+	
+	<script>
+		// 중첩for문
+		var list = '';
+		
+		for(var i=1; i<=3; i++) {
+			for(var j=1; j<=3; j++) {
+				list += '(' + i + ', ' + j + ')\n';
+			}
+		}
+		//alert(list);
+	</script>
+	
+	<script>
+		// 실습 : 구구단출력
+		// 2 x 1 = 2
+		// ...
+		// 9 x 9 = 81
+/* 		var gugudan = '';
+	
+		for
+		
+		alert(gugudan); */
+	</script>
+	
+	<script>
+		// 실습1
+		var output = '';
+		for(var i=0; i<10; i++) {
+			for(var j=0; j<i; j++) {
+				// output += '★';
+				output += '\u2605';
+			}
+			// output += '\n';
+			output += '<br>';
+		}
+		// alert(output);
+		
+		// document.write(output + '<hr>');
+		
+		// 실습2 : 피라미드
+		output = '';
+		
+		for (var i=0; i<5; i++) {
+			// 1. 공란
+			for(var j=5; j>i; j--) {
+				output += ' ';
+			}
+			
+			// 2. 별표(*, ★)
+			for(var k=0; k<2*i-1; k++) {
+				output += '*';
+			}
+			output += '\n';
+		}
+		// alert(output);
+		// document.write(output + '<hr>');
+		
+	</script>
+
+	<script>
+		//alert('\u2605');
+		//alert('★');
+		//alert('\u2606');
+
+		i = 0;
+		k = 0;
+		output = '';
+
+		while(i<9) {
+
+			if (i<5) {
+
+				k = 0;
+				while(k<4-i) {
+					output += '☆'; // \u2606
+					k += 1;
+				}
+
+				k = 0;
+				while(k<i*2+1) {
+					output += '\u2605';
+					k += 1;
+				}
+
+			} else {
+				k = 0;
+				while(k<i-4) {
+					output += '☆';
+					k += 1;
+				}
+
+				k = 0;
+				while(k<(9-i)*2-1) {
+					output += '\u2605';
+					k += 1;
+				}
+			}
+			// output += '\n';
+			output += '<br>';
+			i += 1;
+		}
+
+		//alert(output);
+		document.write(output);
+
+	</script> -->
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+
+//함수란 코드의 집합
+	document.write(prompt+'<br>')
+	document.write('prompt='+typeof(prompt)+'<br>')
+	
+	var 함수 = function(){
+	var num = 10;
+	alert(num);   
+	};
+	document.write(함수+'<br>');
+	document.write('함수1'+typeof(함수)+'<br>')
+	
+	//1. 함수선언방법
+	var 함수2 = function(){
+		var output = prompt('숫자를 입력하세요','숫자');
+		document.write(output+'<br>')		
+	}
+	document.write(함수+'<br>');
+	document.write('함수2'+typeof(함수2)+'<br><hr>')
+	
+	//2. 함수호출방법
+/* 	함수2(); */
+ 
+ 
+	//3. 함수호출시 주의사항
+	function 함수3(){document.write('<h1>function A'+'</h1>');}
+	function 함수3(){document.write('<h1>function B'+'</h1>');}
+	함수3();
+</script>
+
+	<script>
+	//매개변수가 있는 함수
+	var result = 0;
+	function add(){
+		result = 10+20;
+	}
+	add();
+	document.write('<h1>'+result+'</h1>')
+	
+	function add1(x,y){
+		result  = x+y;
+	}
+	add1(10000,20000);
+	document.write('<h1>'+result+'</h1>')
+	
+	//return이 있는 함수
+	function add2(x,y){
+		return x+y;
+	}
+	var xxx = add2(100.00,123.45);
+	document.write('<h1>'+xxx+'</h1>')
+
+	document.write('<h1>'+add2('홍'+'길동')+'</h1>')
+	
+	
+	</script>
+	
+	<script>
+	//가변매개변수(인자,인수,피라미터,아규먼트)
+	function sumAll(a,b,c,d,e,f,g,h,i,j){
+		return a+b+c+d+e+f+g+h+i+j;
+	}
+	document.write('<h2>'+sumAll(1,2,3,4,5,6,7,8,9,10)+'</h2>') //55
+	document.write('<h2>'+sumAll(1,2,3)+'</h2>')//nan
+	document.write('<h2>'+sumAll(1,2,3,4,5,6,7,8,9,10,11)+'</h2>')//55짤림
+	
+	//js는 가변인자라는 내부변수arguments를 기본적으로 제공
+	//arguments는 전달받은 매개변수를 배열로 저장
+	
+	function sum_all(){
+		console.log(typeof(arguments)+arguments.length);
+		sum = 0;
+		for(var i=0; i<arhuments.length; i++){
+			sum +=arguments[i]
+		}return sum;
+	}
+	var result = sum_all(1,2,3,4,5,6,7,8,9,10);
+	console.log('1~10까지의 합 =' + result)
+	console.log('1~10까지의 합 =' + sum_all(1,2,3))
+	</script>
+
+
+
+</head>
+<body>
+
+</body>
+</html>
