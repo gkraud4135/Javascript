@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+		document.write('<h1>document style</h1>');
+		window.onload = function() {
+			var header = document.getElementById("header");
+			
+			// style변경
+			header.style.border = '2px solid black';
+			header.style.color = 'orange';
+			header.style.fontFamily = 'helvetica';
+			header.style.backgroundColor = 'red';
+		}
+</script>
+
+<script>
+		window.onload = function() {
+			var removeHeader = document.getElementById('remove');
+			document.body.removeChild(removeHeader);
+		}
+</script>
+
+<script>
+		window.onclick = function() {
+			var clock = document.getElementById('clock');
+			
+			setInterval(function() {
+				clock.innerHTML = new Date().toString(); // 현재시간을 가져오는 메서드
+			}, 1000);
+		}
+</script>
+
+</head>
+<body>
+
+<h1>document style</h1>
+<h3 id="header">Header</h3>
+<h3 id="remove">Header</h3>
+<h1 id="clock"></h1>
+</body>
+</html>

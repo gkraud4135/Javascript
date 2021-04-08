@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+		// BOM(Broswer Object Model)
+		// BOM에서 최상위 객체는 window이고 자식객체는
+		// location, navigator, history, screen, documnet객체
+		
+		document.write('<ul>')
+		for (var key in window) {
+			document.write('<li>' + key + '=' + window[key] + '</li>');
+		}
+		document.write('</ul>')
+</script>
+
+<script>
+		// window.open() 
+		// open()메서드는 새로운 window객체를 생성한다.
+		// open()메서드는 4개의 매개변수가 있다.
+		// 1. url
+		// 2. name
+		// 3. feature
+		//    1) 윈도우크기 : width, height
+		//    2) location   : 주소창의 유무 1=true, 0=false
+		//    3) menubar    : 메뉴바 표시여부
+		//    4) resizable  : 윈도우창의 크기 조절가능 여부
+		//    5) status     : 상태바 표시여부
+		//    6) toolbar    : tool바 표시여부
+		// 4. replace
+		// window.open('http://www.naver.com', 'child', 'width=300, height=300, location=0, menubar=0');
+</script>
+
+<script>
+		// window객체의 기본메서드
+		/*
+			1. open() 
+			2. close()
+			3. moveBy(x, y) : window를 x,y좌표로 이동 : 상대적이동
+			4. moveTo(x, y) : 현재 모니터의 절대좌표로 이동
+			5. resizeBy(x, y): 크기조정
+			6. resizeTo(x, y): 크기조정
+			7. scrollBy(x, y): 스크롤의 위치 조정
+			8. scrollTo(x, y): 스크롤의 위치 조정
+			9. focus() : 윈도우로 초점을 이동
+		   10. blur()  : 윈도우에 초점을 제거		
+		*/
+		var child = window.open('', '', 'width=300, height=200');
+		child.moveTo(0,0);
+
+		// setInterVal()함수를 이용해서 1초마다 윈도우를 이동
+		setInterval(function() {
+			child.moveBy(10,10);
+		}, 1000); // 1000 = 1초
+</script>
+
+<script>
+		// 1. screen객체 : 모니터화면의 속성
+		document.write('<h3>1. screen </h3>')
+		document.write('<ul>')
+		for (var key in screen) {
+			document.write('<li>' + key + '=' + screen[key] + '</li>');
+		}
+		document.write('</ul>')	
+		
+		// 2. location 객체
+		document.write('<h3>2. location </h3>')
+		document.write('<ul>')
+		for (var key in location) {
+			document.write('<li>' + key + '=' + location[key] + '</li>');
+		}
+		document.write('</ul>')	
+		
+		// 3. navigator 객체
+		document.write('<h3>3. navigator </h3>')
+		document.write('<ul>')
+		for (var key in navigator) {
+			document.write('<li>' + key + '=' + navigator[key] + '</li>');
+		}
+		document.write('</ul>');
+		
+		// 4. document 객체
+		document.write('<h3>4. document </h3>')
+		document.write('<ul>')
+		for (var key in document) {
+			document.write('<li>' + key + '=' + document[key] + '</li>');
+		}
+		document.write('</ul>');		
+</script>
+
+<script>
+		window.onload = function () {
+			alert('윈도우 onload 이벤트가 발생했습니다.');
+		}
+</script>
+
+
+
+</head>
+<body>
+
+</body>
+</html>

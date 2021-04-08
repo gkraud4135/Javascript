@@ -3,6 +3,95 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+ <script>
+		// 객체 : {}로 정의하고 key와 값을 한쌍으로 갖는 타입		
+		// 객체의 접근은 key로 접근한다.
+		var person = {    //name gender = key,    홍길동 male values
+				name: '홍길동',
+				gender: 'Male',
+				address : '서울 구로구 구로동',
+				eat: function(food) {
+					document.write('<li>' + food +'을(를) 먹는다.' + '</li>');
+				}
+		};
+
+		document.write('<h3>1. 객체생성 및 접근하기</h3>');
+		document.write('<ul>');
+		document.write('<li>' + person['name'] + '</li>');
+		document.write('<li>' + person.gender + '</li>');
+		document.write('<li>' + person['address'] + '</li>');
+		person.eat('고기')
+		document.write('</ul>');
+		
+	</script>
+	
+	<script>
+	document.write('<h3>2. 객체일괄로 접근하기</h3>');
+	for (key in person) {
+		document.write(key + ' = ' + person[key] + '<br>');
+	}
+	</script>
+	
+	<script>
+		document.write('<h3>3. 객체의 속성 추가,삭제하기</h3>');
+		/* 
+			자바스크립트에서의 객체는
+			1. property(속성) : property는 객체의 속성을 나타내는 접근 가능한 이름(key)과
+			   활용하능한 값을 가지는 특별한 형태이다.
+			   
+			2. 객체에 프로퍼티의 추가, 삭제
+			
+			    1) 삭제는 delete명령을 사용하여 프로퍼티를 삭제한다.
+			    2) 추가는 객체명.추가할속성명 = 값;
+			       ex) person.age = 100;
+			
+			3. 메서드 : 객체가 가지고 있는 기능(동작)이며 객체내의 함수를 메서드라고 한다.
+			   
+			   메서드 vs 함수
+			   메서드는 객체가 가지고 있는 기능이기 때문에 메서드를 실행하기 위해서는 객체를
+			   통해서 해당 메서드를 호출해서 수행해야 하며 그 동작을 수행하는 주체는 겍체이다.
+		*/
+		
+		delete person.address;
+	    person.age = 10000;
+		for (key in person) {
+			document.write(key + ' = ' + person[key] + '<br>');
+		}			       
+	</script>
+
+
+	<script>
+ 	//구구단 출력함수 	function gugudan(dan){}
+	
+	var x = Number(prompt('숫자를 입력하세요!'))
+	document.write(x+'단'+'<br>');
+	function gugudan(x){
+		for(var i=1; i<=9; i++){
+			document.write(x+'*'+i+'= '+x*i+'<br>')	
+		}document.write('<br>');
+	}
+	gugudan(x); 
+	
+	//계산기 함수 +-*/	function calculator(operater, x ,y){}
+	 
+		var x = Number(prompt('x'));
+		var oper = prompt('+-*/');
+		var y = Number(prompt('y'));
+		var result= 0;
+	 
+	 function calculator(oper,x,y){
+		if(oper=='+'){result = x+y; document.write(result);}
+		else if(oper=='-'){result = x-y; document.write(result);}
+		else if(oper=='*'){result = x/y; document.write(result);}
+		else if(oper=='/'){result = x*y; document.write(result);}
+		else {document.write('오류');}
+		}
+		
+		calculator(oper,x,y);
+	
+	
+	</script>
 </head>
 <body>
 

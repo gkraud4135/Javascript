@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		// 1. screen객체 : 모니터화면의 속성
+		document.write('<h3>1. screen </h3>')
+		document.write('<ul>')
+		for (var key in screen) {
+			document.write('<li>' + key + '=' + screen[key] + '</li>');
+		}
+		document.write('</ul>')	
+		
+		// 2. location 객체
+		document.write('<h3>2. location </h3>')
+		document.write('<ul>')
+		for (var key in location) {
+			document.write('<li>' + key + '=' + location[key] + '</li>');
+		}
+		document.write('</ul>')	
+		
+		// 3. navigator 객체
+		document.write('<h3>3. navigator </h3>')
+		document.write('<ul>')
+		for (var key in navigator) {
+			document.write('<li>' + key + '=' + navigator[key] + '</li>');
+		}
+		document.write('</ul>');
+		
+		// 4. document 객체
+		document.write('<h3>4. document </h3>')
+		document.write('<ul>')
+		for (var key in document) {
+			document.write('<li>' + key + '=' + document[key] + '</li>');
+		}
+		document.write('</ul>');		
+	</script>
+	
+		<script>
+		window.onload = function () {
+			alert('윈도우 onload 이벤트가 발생했습니다.');
+		}
+	</script>
+	
+	
+	
+	</head>
+<body>
+	
+</body>
+</html>

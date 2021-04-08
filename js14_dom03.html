@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- <script>
+		window.onload = function() {
+			var output = '';
+			output += '<ul>';
+			output += '<li>JavaScript</li>';
+			output += '<li>HTML5</li>';
+			output += '<li>CSS3</li>';
+			output += '<li>jQuery</li>';
+			output += '</ul>';
+			
+/*   		document.write(output);
+  			document.write('<h1>DOM</h1>');    한개 밖에 출력이 안됨 가장아래 */
+  			document.body.innerHTML = output;
+ 			document.body.innerHTML = '<h1>DOM</h1>';   
+		}
+</script> -->
+
+<!-- <script>
+		// getElelemtById()
+		window.onload = function() {
+			var header1 = document.getElementById('header-1');
+			var header2 = document.getElementById('header-2');
+			
+			// 문서의 속성을 변경
+			header1.innerHTML = '헤더-1';
+			header2.innerHTML = '헤더-2';
+		}
+</script> -->
+
+<!-- <script>
+		window.onload = function() {
+			var headers = document.getElementsByTagName('h1')
+			// alert(typeof(headers));
+/* 			headers[0].innerHTML = '헤더-1';
+			headers[1].innerHTML = '헤더-2'; */
+			for(var i in headers) {
+				headers[i].innerHTML = '헤더-'+ i;
+			};
+		}
+</script> -->
+	
+<script>
+		document.write('<h1>querySelector</h1>');
+		window.onload = function() {
+			var header1 = document.querySelector("#header-1");
+			var header2 = document.querySelector("#header-2");
+			header1.innerHTML = '헤더-1';
+			header2.innerHTML = '헤더-2';			
+		}
+</script>
+	
+</head>
+<body>
+	<!-- h1#header-1{Header}*2 -->
+<!-- <h1 id="header-1">헤더-1</h1>
+	<h1 id="header-2">헤더-2</h1>             Byid-->
+	
+	<h1 id="header-1">Header</h1>     <!-- i값은 id값이 없으면 정의 0,1 있으면 그걸로  -->        
+	<h1 id="header-2">Header</h1>
+</body>
+</html>

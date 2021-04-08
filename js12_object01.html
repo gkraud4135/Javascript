@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+		
+		// 1. 변수만 선언
+		var student = {};
+		
+		// 2. 객체의 속성추가
+		student.name = '소향';
+		student.age = 42;
+		student.kor = 90;
+		student.eng = 85;
+		student.mat = 76;
+		student.sci = 82;
+		student.toString = function() {
+			document.write(this.name + ', ' + this.age);
+		};
+		student.getSum = function() {};
+		
+		
+		document.write('<h3>객체속성</h3>');
+		for (key in student) {
+			document.write(key + ' = ' + student[key] + '<br>');
+		}		
+		
+		student.toString();
+	</script>
+	
+	<script>
+		var students = [];
+		students.push({name:'소향', 
+					   kor:90, 
+					   eng:90, 
+					   mat:90,
+					   age:22,
+					   toString: function() {
+						   return this.name + ', ' + this.age;
+					   }, 
+					   getSum: function() {
+						   return this.kor + this.eng + this.mat;
+					   }
+					  });
+		alert(students[0].getSum());
+		
+		function makeStudent(name, kor, eng, mat) {
+			var student = {
+					name:name,
+					kor:kor,
+					eng:eng,
+					mat:mat,
+					getSum: function() {
+						return this.kor + this.eng + this.mat;
+					},
+					toString: function() {
+						return this.name + '의 총점은 ' + this.getSum();
+					}
+			}
+			return student;
+		}
+		students.push(makeStudent('류현진', 10,10,10));
+		students.push(makeStudent('박지성', 20,20,20));
+		students.push(makeStudent('홍길동', 30,30,30));
+		students.push(makeStudent('임꺽정', 40,40,40));
+		
+		document.write('<ul>');
+		for(var i in students) {
+			document.write('<li>' + students[i].toString() + '</li>');
+		}
+		document.write('</ul>');
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

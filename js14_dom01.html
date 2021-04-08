@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+		// DOM(Document Object Model)
+		// document객체와 관련된 객체의 집합을 의미.
+		// DOM을 사용하면 html페이지에 tag를 추가, 수정, 삭제할 수가 있다.
+		
+		// 1. 메서드
+		// getElementById(id) : id속성으로 문서객체를 선택
+		// querySelector(선택자) : 선택자를 사용해서 문서객체를 선택
+		// getElementByName(name): 이름속성으로 이름속성에 해당되는 문서객체들을 선택
+		// getElementsClassName(class) : class속성으로 문서객체를 선택
+		// querySelectorAll(선택자) : 선택자를 이용해 해당되는 문서객체를 선택
+		
+		// 2. 속성
+		// innerHTML : 내부글자를 조작
+		// style : 스타일을 조작
+		// setAttribute([속성이름], [속성값]) : 속성을 지정
+		// getAttribute([속성이름]) 속성을 추출
+		window.onload = function() {
+			var header = document.createElement('h1');
+			document.body.appendChild(header);
+			
+			var textNode = document.createTextNode('Hello DOM!!!');
+			header.appendChild(textNode);
+		}
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

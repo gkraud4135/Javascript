@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+
+
+<script>alert('process-0')</script>
+<script>
+		window.onload = function() {
+			alert('process-onload');
+		}
+	</script>
+
+</head>
+<body>
+	<h1>process-1</h1>
+	<script>alert('process-1')</script>
+	<h1>process-2</h1>
+	<script>alert('process-2')</script>	
+
+</body>
+</html>
