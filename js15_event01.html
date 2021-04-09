@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+		window.onload = function() {
+			var header1 = document.getElementById('header1');
+			var header2 = document.getElementById('header2');
+			
+			header1.onclick = function() {
+				alert('header1을 클릭했습니다.');
+			};
+			
+			
+			function whenClick() {
+				alert('header2를 클릭했습니다.');
+			}
+						
+			header2.onclick = whenClick;
+			
+			// 이벤트를 제거
+			header2.onclick = null;
+		};
+	</script>
+</head>
+<body>
+<h1 id="header1">click</h1>
+<h1 id="header2">click</h1>
+<h1 onclick="alert('header3를 클릭했습니다.')">Click</h1>
+<h1 onclick="whenClick">whenClick</h1>
+</body>
+</html>

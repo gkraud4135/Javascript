@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+	<script>
+	
+		// 비밀번호가 같으면 '로그인성공!!!'
+		// 아니면 '비밀번호가 틀립니다! 다시 입력하세요!'
+		// form에서 submit버튼을 클릭하면 onsubmit이벤트가 발생
+		
+		window.onload = function () {
+			document.getElementById('my-form').onsubmit
+				= function () {
+					var pass = document.getElementById('pass').value;
+					var passCheck = document.getElementById('pass-check').value;
+					
+					// 비밀번호확인
+					if(pass==passCheck) {
+						document.write('<h3>로그인성공!!</h3>');
+					} else {
+						document.write('<h3>비밀번호가 틀립니다! 다시 입력하세요!!</h3>');
+					}
+			}
+		}	
+		
+		function whenSubmit() {
+			document.write('<h3>인라인이벤트 onsubmit</h3>');
+		}
+	</script>
+</head>
+<body>
+
+	<form action="" id="my-form">
+		<label for="name">이름</label><br>
+		<input type="text" id="name" name="name"><br>
+		
+		<label for="pass">비밀번호</label><br>
+		<input type="password" id="pass" name="pass"><br>
+				
+		<label for="pass-check">비밀번호확인</label><br>
+		<input type="password" id="pass-check" name="pass-check"><br>
+		
+		<input type="submit" value="확인">	
+	</form>
+	
+	<form onsubmit="whenSubmit()">
+		<label for="name">이름</label><br>
+		<input type="text" id="name" name="name"><br>
+		
+		<label for="pass">비밀번호</label><br>
+		<input type="password" id="pass" name="pass"><br>
+				
+		<label for="pass-check">비밀번호확인</label><br>
+		<input type="password" id="pass-check" name="pass-check"><br>
+		
+		<input type="submit" value="확인">	
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script>
+$(function(){
+   var person = {name:'소향'}
+   
+   $.extend(person,{ //기존객체의추가
+      address:'인천',
+      job:'가수'
+   })
+   var output = '';
+   $.each(person, function(key,item){
+      output += key+'='+item + '<br>';
+   })   ;
+   document.write(output);
+});
+</script>
+</head>
+<body>
+
+</body>
+</html>

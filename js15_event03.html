@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+
+window.onload = function(){
+	var aa1=0;
+	var aa2=0;
+	document.getElementById('id-a').onclick =
+	function (){
+	var up1 = document.getElementById('counter-a'); 
+	aa1 = aa1+1;
+	up1.innerHTML = aa1;
+	}
+	document.getElementById('id-b').onclick =
+	function (){
+	var up2 = document.getElementById('counter-b'); 
+	aa2 = aa2+1;
+	up2.innerHTML = aa2;
+	}
+	
+	var aa=0;
+	var out = document.getElementById('counter-c'); 
+	
+	document.getElementById('id-c').onclick =
+	function (){
+	aa = aa+1;
+	out.innerHTML = aa;
+	} 
+	
+	document.getElementById('id-d').onclick =
+	function (){
+	aa = aa-1;
+	out.innerHTML = aa;
+	
+	
+	
+	} 
+	
+	
+	
+	
+}
+
+</script>
+
+<!-- <script>   불러와서 출력
+		window.onload = function() {
+			
+			var buttonA = document.getElementById('button-a');
+			var buttonB = document.getElementById('button-b');
+			var counterA = document.getElementById('counter-a');
+			var counterB = document.getElementById('counter-b');
+			
+			buttonA.onclick = function() {
+				counterA.innerHTML = Number(counterA.innerHTML) + 1;
+			};
+			
+			buttonB.onclick = function() {
+				// counterA.innerHTML = Number(counterA.innerHTML) + 1;
+				buttonA.onclick();
+				counterB.innerHTML = Number(counterB.innerHTML) + 1;	
+			};
+			
+		}
+	</script> -->
+
+
+<script>
+
+window.onload = function(){
+	document.getElementById('u').onclick = function (){
+		var up = document.getElementById('item');
+		up.style.position = 'relative';
+		up.style.top = 100+ 'px';
+		
+	}
+	
+	}
+
+
+
+</script>
+
+<style>
+#item{
+	width: 20px;
+	height: 20px;
+	background: black;}
+</style>
+
+</head>
+<body>
+<button id="id-a">ButtonA</button>
+<button id="id-b">ButtonB</button>
+
+<h1>Button A-<span id="counter-a">0</span></h1>
+<h1>Button B-<span id="counter-b">0</span></h1>
+
+<button id="id-c">+</button>
+<button id="id-d">-</button>
+<h1 id="counter-c">0</h1>
+
+<button id="u">↑</button>
+<button id="l">←</button>
+<button id="r">→</button>
+<button id="d">↓</button>
+<h1 id="item" ></h1>
+
+
+
+
+</body>
+</html>

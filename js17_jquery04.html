@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+		$(function() {
+			// $('body > *').css('color', 'red'); // 자손
+			$('body *').css('color', 'blue'); // 후손
+			
+		})
+	</script>
+
+</head>
+<body>
+
+	<!-- div>ul>li*5 -->
+	<div style="color: blue;">
+		<ul style="color: blue;">
+			<li style="color: blue;">Apple</li>
+			<li style="color: blue;">Dog</li>
+			<li style="color: blue;">Cat</li>
+			<li style="color: blue;">Bag</li>
+			<li style="color: blue;">Elephant</li>
+		</ul>
+	</div>
+
+</body>
+</html>

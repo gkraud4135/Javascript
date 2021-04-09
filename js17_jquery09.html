@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.high-light{background:yellow;}
+.high-light-1{background:yellow;}
+.high-light-2{background:orange;}
+.high-light-3{background:blue;}
+.high-light-4{background:green;}
+.high-light-5{background:red;}
+
+</style>
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(function() {
+	//$('h1').addClass('high-light')
+	$('h1').addClass(function(index){
+		return 'high-light-'+(index+1);
+	});
+});
+</script>
+
+</head>
+<body>
+<h1>Header-1</h1>
+<h1>Header-2</h1>
+<h1>Header-3</h1>
+<h1>Header-4</h1>
+<h1>Header-5</h1>
+</body>
+</html>

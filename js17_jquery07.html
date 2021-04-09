@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>Insert title here</title>
+   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+   <script>
+      $(function() {
+/* 		$('tr:odd').css('background','orange');
+		$('tr:even').css('background','green');
+		$('tr:first').css('background','grey').css('color','red'); */
+		$('tr:eq(0)').css('background','grey').css('color','red'); 
+		$('tr:nth-child(3n+1)').css('background','brown').css('color','white'); 
+		$('tr:nth-child(3n+2)').css('background','blue').css('color','white'); 
+		$('tr:nth-child(3n)').css('background','yellow'); 
+		
+      })
+   </script>
+</head>
+<body>
+   <table border="1">
+      <tr>
+         <td>이름</td>
+         <td>혈액형</td>
+         <td>지역</td>
+      </tr>
+      <tr>
+         <td>소향</td>
+         <td>A</td>
+         <td>인천광역시 송도</td>
+      </tr>
+      <tr>
+         <td>홍길동</td>
+         <td>AB</td>
+         <td>서울 구로구</td>
+      </tr>
+      <tr>
+         <td>Lala Favian</td>
+         <td>B</td>
+         <td>강서구</td>
+      </tr>
+      <tr>
+         <td>홍길순</td>
+         <td>A</td>
+         <td>강남구</td>
+      </tr>
+      <tr>
+         <td>홍길녀</td>
+         <td>AB</td>
+         <td>강동구</td>
+      </tr>
+      <tr>
+         <td>홍길자</td>
+         <td>B</td>
+         <td>종로구</td>
+      </tr>
+   </table>
+</body>
+</html>

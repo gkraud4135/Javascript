@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script>
+		$(function() {
+			// 5초에 코드를 실행 : setTimeout()
+			setTimeout(function() {
+				var value = $('select > option:selected').val();
+				document.write('<h3>' + value + '</h3>')
+			}, 3000);
+		})
+	</script>
+</head>
+
+
+<body>
+<select name="" id="">
+		<option value="Apple">Apple</option>
+		<option value="Bag">Bag</option>
+		<option value="Cat" selected>Cat</option>
+		<option value="Dog">Dog</option>
+		<option value="Elephant">Elephant</option>
+	</select>
+
+
+</body>
+</html>
