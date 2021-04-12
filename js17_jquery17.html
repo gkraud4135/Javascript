@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div{
+width:50px;
+height:50px;
+background-color:orange;
+position:relative;
+}
+</style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<script>
+		$(function() {
+			// div의 width, height -> 문자열을 숫자 Number대신 pareInt();
+			// div를 click했을 마다 50px씩 커지게 하기
+			$('div').click(function() {
+				var width = $(this).css('width');
+				var height = $(this).css('height');
+				
+				$(this).animate({
+					width : parseInt(width) + 50,
+				height : parseInt(height) + 50
+				})
+			})
+		})
+	</script>
+
+</head>
+<body>
+<div></div>
+
+</body>
+</html>

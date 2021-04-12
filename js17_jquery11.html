@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+		// DOM의 선택과 탐색
+		$(function() {
+		// 1. filter() : 
+		// $(selector).filter(selector)
+		$('h3').filter(':even').css({
+			backgroundColor: 'black',
+			color : 'white'
+		});
+		
+		
+		// $(selector).filter(funcion() {})
+		$('h3').filter(function(index){
+			return index%3==0;
+		}).css({
+			backgroundColor: 'orange',
+			color : 'red'
+		});
+			
+		});
+	</script>
+
+</head>
+<body>
+<h3>header-1</h3>
+<h3>header-2</h3>
+<h3>header-3</h3>
+<h3>header-4</h3>
+<h3>header-5</h3>
+<h3>header-6</h3>
+</body>
+</html>

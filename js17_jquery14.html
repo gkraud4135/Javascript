@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<script>
+		$(function() {
+			$('textarea').keyup(function() {
+				// 남은 글자수를 확인
+				var inputLength = $(this).val().length;
+				var remain = 150 - inputLength;
+				
+				$('h1').html(remain);
+				
+				// 문서객체의 색상변경 remain >= 0 글자색 검정색 아니면 빨간색으로 
+				if(remain>=0) {
+					$('h1').css('color', 'black');
+				} else {
+					$('h1').css('color', 'red');
+				}
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<div>
+		<p>Hello</p>
+		<h1>150</h1>
+		<textarea name="" id="" cols="70" rows="5"></textarea>
+	</div>
+
+</body>
+</html>
