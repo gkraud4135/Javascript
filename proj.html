@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bootstrap</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<a style="display:scroll;position:fixed;bottom:200px;right:15px; color:black;" href="#" title=”맨위로"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-up-square-fill" viewBox="0 0 16 16"style = "color:white">
+  <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4 9h8a.5.5 0 0 0 .374-.832l-4-4.5a.5.5 0 0 0-.748 0l-4 4.5A.5.5 0 0 0 4 11z"/>
+</svg></a>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap');
+</style>
+<style> /* http://pwofficial.co.kr/ */
+      body { 
+      padding: 0px; 
+      margin: 0px; 
+      width: 100%;
+      height: 100%;
+      background: black;
+      color:white;
+      }
+#aa{height:100vh}
+#mainn{height:100%;}
+#column{
+		}
+#mainp{width:100%; height:60%;}
+#drop-down{height:100vh;}
+#col-fluid{height:100vh;}
+#list-group{height:100vh;background: white;}
+#collapsible{height:100vh;}
+#nav{height:100vh;}
+#nav-teb{height:100vh;}
+#modal{height:100vh;}
+#form{height:100vh;}
+#button{height:100vh;}
+#alert{height:100vh;}
+#table{height:100vh; color:black;}
+#color{height:100vh;}
+#log-in-icon{height:100vh;}
+#comment{height:100vh;}
+#slide{height:100vh;}
+#filter{height:100vh;
+		background: white;
+		color:black;} 
+      
+      .jb-box { width: 100%; height: 100vh; overflow: hidden;margin: 0px auto; position: relative;}
+      video { width: 100%;}
+      .jb-text { position: absolute; top: 20%; width: 100%; }
+      .jb-text p { margin-top: -24px; text-align: center; font-size: 48px; color: #ffffff; font-family: 'Kiwi Maru', serif;}
+      @media(max-width:768px){
+       .jb-box{height: 100%;}
+        h1{
+            font-size: 70%;
+        }
+        p{
+            font-size: 17px;
+            letter-spacing: 10px;
+        }
+        
+    }
+	  .btn_top {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: black;
+    color: #fff;
+    border: 0px;
+    outline: 0px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding-left: 7px;
+    padding-top: 5px;
+    
+  }
+	.btnn{
+  background-color:rgba(255,255,255,0.6);                                                                 
+  z-index:1;
+  color:black;
+  font-size:1.5rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  
+    }
+	.btnn:hover{
+	background: #FFFFFF;
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	}
+
+	#downn{
+	margin:0px;
+	padding:0px;
+	width:100%;
+	position:fixed;
+	
+	}
+  	.btnn:hover #downn{
+  		height:500px;
+  		background: #FFFFFF;
+  	}
+
+ /*  footer설정 */
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  /*  footer설정 */
+  
+  /* nav설정 */
+    .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color:#FFFFFF;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  } 
+    .navbar li a, .navbar .navbar-brand { 
+    color: #343a40 !important;
+  }
+    .navbar-nav li a:hover {
+    color: #212529 !important;
+    font-weight: bold;
+    border-bottom: .15rem solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.7);
+  }
+
+#column{background: #F1F1F1;}
+
+  
+  /* nav설정 */
+  
+.navbar {display: none;}
+
+ul.nav li.dropdown:hover > ul.dropdown-menu{
+    display: block;    
+}
+</style>
+<script>
+$(function(){
+	$(window).scroll(function(){  //스크롤하면 아래 코드 실행
+	       var num = $(this).scrollTop();  // 스크롤값
+	       if( num > 5 ){  // 스크롤을 36이상 했을 때
+	          $(".navbar").css("display","block");
+	          $(".navbar").css("position","fixed");
+	       }else{
+	           $(".navbar").css("display","none");
+	       }
+	  });
+	});
+
+</script>
+<script>
+$(document).ready(function() {
+
+	$('.btnn').click(function() {
+
+		$(location).attr('href','#aa');
+
+	});
+
+});
+
+</script>
+
+</head>
+
+
+
+ <body id="mypage" data-spy="scroll" data-target=".navbar" data-offset="50">
+ <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">  <!-- 작게했을떄 -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#mypage" ><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bootstrap-fill" viewBox="0 0 16 16">
+  <path d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375v2.725z"/>
+  <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4h-8zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396H5.062z"/>
+ </svg></span> Boot strap</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#mypage">HOME</a></li>
+        <li><a href="#nav">NAV</a></li>
+        <li><a href="#form">FORM</a></li>
+        <li><a href="#button">BUTTON</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+				<li><a href="#drop-down">drop-down</a></li>
+				<li><a href="#column">column</a></li>
+				<li><a href="#col-fluid">col-fluid</a></li>
+				<li><a href="#list-group">list-group</a></li>
+				<li><a href="#collapsible">collapsible</a></li>
+				<li><a href="#nav">nav</a></li>
+				<li><a href="#nav-teb">nav-teb</a></li>
+				<li><a href="#modal">modal</a></li>
+				<li><a href="#form">form</a></li>
+				<li><a href="#button">button</a></li>
+				<li><a href="#alert">alert</a></li>
+				<li><a href="#table">table</a></li>
+				<li><a href="#color">color</a></li>
+				<li><a href="https://www.w3schools.com/bootstrap/bootstrap_typography.asp" target="_blank">text</a></li>
+				<li><a href="#log-in-icon">log-in-icon</a></li>
+				<li><a href="#comment">comment</a></li>
+				<li><a href="#slide">slide</a></li>
+				<li><a href="#filter">filter</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+ </nav>
+
+    <div class="jb-box">
+      <video muted autoplay loop>
+        <source src="sky.mp4" type="video/mp4" >
+        <strong>Your browser does not support the video tag.</strong>
+      </video>
+      <div class="jb-text">
+        <p>How To Make a <br>Website with Bootstrap</p>
+        <p><a class="btnn" >Learn More</a></p>
+      </div>
+
+    </div>		
+<div id="downn" class="fixed-top">
+</div>		
+<div id="aa">
+<ul class="nav nav-pills nav-stacked">
+  <li class="active"><a href="#">Home</a></li>
+				<li><a href="#drop-down">drop-down</a></li>
+				<li><a href="#column">column</a></li>
+				<li><a href="#col-fluid">col-fluid</a></li>
+				<li><a href="#list-group">list-group</a></li>
+				<li><a href="#collapsible">collapsible</a></li>
+				<li><a href="#nav">nav</a></li>
+				<li><a href="#nav-teb">nav-teb</a></li>
+				<li><a href="#modal">modal</a></li>
+				<li><a href="#form">form</a></li>
+				<li><a href="#button">button</a></li>
+				<li><a href="#alert">alert</a></li>
+				<li><a href="#table">table</a></li>
+				<li><a href="#color">color</a></li>
+				<li><a href="https://www.w3schools.com/bootstrap/bootstrap_typography.asp" target="_blank">text</a></li>
+				<li><a href="#log-in-icon">log-in-icon</a></li>
+				<li><a href="#comment">comment</a></li>
+				<li><a href="#slide">slide</a></li>
+				<li><a href="#filter">filter</a></li>
+</ul>
+</div>
+<div id="mainn">
+<h1><mark>Boot strap</mark></h1>
+<h2><abbr title="World Health Organization">click to find each example</abbr></h2>
+<blockquote>
+<code>span</code>, <code>section</code>, and <kbd>div</kbd>
+</blockquote>
+<blockquote>
+	<div class="container" id="collapsible">
+		<h3>watch source code</h3>
+		<a href="#demo" class="btn btn-info" data-toggle="collapse">source code</a>
+		<div id="demo" class="collapse in">
+		<img alt="" src="main.png" id="mainp">
+		</div>
+	</div>
+</blockquote>
+</div>
+
+
+
+
+<hr>
+<div class="container" id="drop-down">
+		<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle"
+				type="button" data-toggle="dropdown">Bootstrap Example <span class="caret"></span></button>
+				
+			<ul class="dropdown-menu dropdown-left">
+				<li class="dropdwon-header">index</li>
+				<li><a href="#column">column</a></li>
+				<li><a href="#col-fluid">col-fluid</a></li>
+				<li><a href="#list-group">list-group</a></li>
+				<li><a href="#collapsible">collapsible</a></li>
+				<li><a href="#nav">nav</a></li>
+				<li><a href="#nav-teb">nav-teb</a></li>
+				<li><a href="#modal">modal</a></li>
+				<li><a href="#form">form</a></li>
+				<li><a href="#button">button</a></li>
+				<li><a href="#alert">alert</a></li>
+				<li><a href="#table">table</a></li>
+				<li><a href="#color">color</a></li>
+				<li><a href="https://www.w3schools.com/bootstrap/bootstrap_typography.asp" target="_blank">text</a></li>
+				<li><a href="#log-in-icon">log-in-icon</a></li>
+				<li><a href="#comment">comment</a></li>
+				<li><a href="#slide">slide</a></li>
+				<li><a href="#filter">filter</a></li>
+				
+				<li class="divider"></li>
+				<li class="divider"></li>
+				<li class="disabled"><a href="#">disabled</a></li>
+				<li class="dropdwon-header">2nd Header</li>
+				<li><a href="#">Bootstrap</a></li>
+			</ul>
+		</div>
+	</div>
+<hr>
+
+
+<div id="column">
+<div class="jumbotron text-center" >
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Column 1</h3>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 2</h3>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 3</h3>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+</div>
+</div>
+<hr>
+
+<div class="container-fluid" id="col-fluid">
+		<div class="row">
+			<div class="col-sm-4" style="background-color:red">col-sm-4</div>
+			<div class="col-sm-4" style="background-color:orange">col-sm-4</div>
+			<div class="col-sm-4" style="background-color:pink">col-sm-4</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-2" style="background-color:red">col-sm-2</div>
+			<div class="col-sm-10" style="background-color:orange">col-sm-10</div>
+		</div>
+	</div>
+
+	<div class="container" id="list-group">
+	
+		<h4>List Groups</h4>
+		
+		<ul class="list-group">
+			<li class="list-group-item">First Item</li>
+			<li class="list-group-item">Second Item</li>
+			<li class="list-group-item">Third Item</li>
+		</ul>
+		
+		<ul class="list-group">
+			<li class="list-group-item">New <span class="badge">12</span></li>
+			<li class="list-group-item list-group-item-danger">Deleted <span class="badge">8</span></li>
+			<li class="list-group-item">Waring <span class="badge">3</span></li>
+		</ul>	
+		
+		<ul class="list-group">
+			<li class="list-group-item active">New <span class="badge">12</span></li>
+			<li class="list-group-item list-group-item-danger">Deleted <span class="badge">8</span></li>
+			<li class="list-group-item disabled">Waring <span class="badge">3</span></li>
+		</ul>	
+	</div>
+	<hr>
+	<div class="container" id="collapsible">
+	
+		<h3>Simple Collapsible</h3>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		
+		<a href="#demo" class="btn btn-info" data-toggle="collapse">Simple Collapsible</a>
+		
+		<div id="demo" class="collapse in">
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+			Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+			when an unknown printer took a galley of type and scrambled it to make a type 
+			specimen book. It has survived not only five centuries, but also the leap 
+			into electronic typesetting, remaining essentially unchanged. 
+			It was popularised in the 1960s with the release of Letraset sheets containing
+		</div>
+	</div>
+	<hr>
+		<div class="container" id="nav">
+	
+		<h3>Tabs</h3>
+		<ul class="nav nav-pills nav-stacked">
+			<li class="active"><a href="#">Home</a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 1 <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Sub Menu 1</a></li>
+					<li><a href="#">Sub Menu 2</a></li>
+					<li><a href="#">Sub Menu 3</a></li>
+				</ul>
+			</li>
+		</ul>
+		
+	</div>
+<hr>
+	<div class="container" id="nav-teb">
+	
+		<h2>Dynamic Tab</h2>
+		<p>
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+			Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+			when an unknown printer took a galley of type and scrambled it to make a type 
+			specimen book. It has survived not only five centuries, but also the leap 
+			into electronic typesetting, remaining essentially unchanged. 
+			It was popularised in the 1960s with the release of Letraset sheets containing		
+		</p>
+		
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+			<li><a href="#menu1" data-toggle="tab">Menu 1</a></li>
+			<li><a href="#menu2" data-toggle="tab">Menu 2</a></li>
+			<li><a href="#menu3" data-toggle="tab">Menu 3</a></li>
+		</ul>
+		
+		<div class="tab-content">
+			<div id="home" class="tab-pane fade in active">
+				<h1>Home</h1>
+				<p>
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+					when an unknown printer took a galley of type and scrambled it to make a type 
+					specimen book. It has survived not only five centuries, but also the leap 
+					into electronic typesetting, remaining essentially unchanged. 
+					It was popularised in the 1960s with the release of Letraset sheets containing					
+				</p>
+			</div>
+			<div id="menu1"  class="tab-pane fade">
+				<h1>Menu1</h1>
+				<p>
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+					when an unknown printer took a galley of type and scrambled it to make a type 
+					specimen book. It has survived not only five centuries, but also the leap 
+					into electronic typesetting, remaining essentially unchanged. 
+					It was popularised in the 1960s with the release of Letraset sheets containing					
+				</p>			
+			</div>
+			<div id="menu2" class="tab-pane fade">
+				<h1>Menu2</h1>
+				<p>
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+					when an unknown printer took a galley of type and scrambled it to make a type 
+					specimen book. It has survived not only five centuries, but also the leap 
+					into electronic typesetting, remaining essentially unchanged. 
+					It was popularised in the 1960s with the release of Letraset sheets containing					
+				</p>			
+			</div>
+			<div id="menu3" class="tab-pane fade">
+				<h1>Menu3</h1>
+				<p>
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+					when an unknown printer took a galley of type and scrambled it to make a type 
+					specimen book. It has survived not only five centuries, but also the leap 
+					into electronic typesetting, remaining essentially unchanged. 
+					It was popularised in the 1960s with the release of Letraset sheets containing					
+				</p>			
+			</div>
+		</div>
+	</div>
+<hr>
+
+
+<div class="container" id="modal">
+	
+		<h3>Modal Window</h3>
+		
+		<button class="btn btn-info btn-lg" type="button" data-toggle="modal"
+		data-target="#myModal">모달창열기</button>
+	
+		<div class="modal fade" id="myModal" role="dialog">
+			<!-- 모달내용 -->
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="close" type="button" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Modal Header</h4>
+					</div>
+					<div class="modal-body">
+						<p>
+							안녕<br>
+							하세요<br>
+							반갑습니다<br>
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-default" type="button" data-dismiss="modal">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+<hr>
+
+
+	<div class="container" id="form">
+		<h3>Vertical Form</h3>
+		<form action="" class="form-horizontal">
+			<div class="form-group">
+				<label for="email" class="sr-only">Email:</label>
+				<input class="form-control" type="email" id="email" name="email" placeholder="eMail을 입력하세요!">
+			</div>
+			<div class="form-group">
+				<label for="pass" class="sr-only">Password:</label>
+				<input class="form-control" type="password" id="pass" name="pass" placeholder="password 을 입력하세요!">
+			</div>
+			
+			<div class="checkbox">
+				<label for=""><input type="checkbox" name="remember"> 아이디기억하기</label>
+			</div>
+			
+			<button class="btn btn-default" type="button">확인</button>
+		</form>
+	</div>
+	
+	<div class="container">
+		<h3>고정</h3>
+		<form action="" class="form-horizontal">
+			<div class="form-group">
+				<label for="email" class="control-label col-sm-2">eMail:</label>
+				<div class="col-sm-10">
+					<p class="form-control-static">sohyang@gmail.com</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="pass" class="control-label col-sm-2">Password:</label>
+				<div class="col-sm-10">
+					<input type="password" class="form-control">	
+				</div>
+			</div>
+		</form>
+	</div>	
+	
+	
+<hr>
+
+<div id="button">
+	<button type="button" class="btn">basic</button>
+	<button type="button" class="btn btn-default">Default</button>
+	<button type="button" class="btn btn-primary">Primary</button>
+	<button type="button" class="btn btn-success">Success</button>
+	<button type="button" class="btn btn-info">Info</button>
+	<button type="button" class="btn btn-warning">Warning</button>
+	<button type="button" class="btn btn-danger">Danger</button>
+	<button type="button" class="btn btn-link">link</button>
+	<a href="#" class="btn btn-info">Link Button</a>
+	<hr />
+	
+	<button type="button" class="btn btn-primary btn-lg">Primary</button>
+	<button type="button" class="btn btn-primary btn-md">Primary</button>
+	<button type="button" class="btn btn-primary btn-sm">Primary</button>
+	<button type="button" class="btn btn-primary btn-xs">Primary</button>
+	<hr />
+	
+	<button type="button" class="btn btn-primary btn-xs active">Active</button>
+	<button type="button" class="btn btn-primary btn-xs disabled">Disabled</button>
+	<hr />
+	
+	<div class="btn-group btn-group-xs">
+		<button type="button" class="btn btn-primary">Apple</button>
+		<button type="button" class="btn btn-primary">Banana</button>
+		<div class="btn-group, btb-group-xs">
+			<button class="btn btn-primary dropdown-toggle" 
+					data-toggle="dropdown">Samsung <span class="caret"></span></button>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="#">Tablet</a></li>
+				<li><a href="#">SmartPhone</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<div class="container">
+	<h2>St</h2>
+	</div>
+	</div>
+	
+	<hr>
+	
+	
+	<div class="container" id="alert">
+		<div class="alert alert-success alert-dismissable fade in">
+			<a href="#" class="close" data-dismiss="alert" >&times;</a>
+			<strong>Success</strong> 안녕하세요 반갑습니다. Bootstrap을 배워봅시다!!!
+		</div>
+	</div>
+	
+	
+<hr>
+
+
+	<div class="container" id="table">
+		<!-- table>(thead>tr>th*3)+tbody>(tr>td*3)*3 -->
+		<table class="table table-striped table-bordered table-hover">
+			<thead>
+				<tr class="success">
+					<th>First Name</th>
+					<th>Mobile</th>
+					<th>eMail</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>소향1</td>
+					<td>010-9999-0001</td>
+					<td>sohyang1@gmail.com</td>
+				</tr>
+				<tr>
+					<td>소향2</td>
+					<td>010-9999-0002</td>
+					<td>sohyang2@gmail.com</td>
+				</tr>
+				<tr>
+					<td>소향3</td>
+					<td>010-9999-0003</td>
+					<td>sohyang3@gmail.com</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>	
+	
+	
+<hr>
+
+<div class="container" id="color">
+  <p class="text-muted">This text is muted.</p>
+  <p class="text-primary">This text is important.</p>
+  <p class="text-success">This text indicates success.</p>
+  <p class="text-info">This text represents some information.</p>
+  <p class="text-warning">This text represents a warning.</p>
+  <p class="text-danger">This text represents danger.</p>
+  <p class="bg-primary">This text is important.</p>
+  <p class="bg-success">This text indicates success.</p>
+  <p class="bg-info">This text represents some information.</p>
+  <p class="bg-warning">This text represents a warning.</p>
+  <p class="bg-danger">This text represents danger.</p>
+</div>
+
+
+
+<hr>
+
+<div class="container" id="log-in-icon">
+	
+		<h3>Log In</h3>
+		<h2>https://icons.getbootstrap.com/</h2>
+		<form action="">
+		
+			<div class="input-group">
+				<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+				<input type="text" class="form-control" id="email" name="email" />
+			</div>
+			
+			<div class="input-group">
+				<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+				<input type="password" class="form-control" id="pass" name="pass" />
+			</div>
+			
+			<div class="input-group">
+				<span class="input-group-addon"><i class="glyphicon glyphicon-glass"></i></span>
+				<input type="text" class="form-control" id="txt" name="txt" />
+			</div>
+				
+		</form>
+	</div>
+
+<hr>
+
+
+<div class="container" id="comment">
+	
+		<h3>댓글달기</h3>
+		
+		<div class="media">
+		
+			<div class="media-left">
+				<img src="img_avatar1.png" alt="" class="media-object" style="width:45px">		
+			</div>
+			<div class="media-body">
+				<h4 class="media-heading"> 소향<i>2021.04.13</i></h4>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+				Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+				when an unknown printer took a galley of type and scrambled it to make a type 
+				specimen book. It has survived not only five</p>
+
+				<div class="media">
+					<div class="media-left">
+						<img src="img_avatar2.png" alt="" class="media-object" style="width:45px">
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading"> 나얼<i>2021.04.15</i></h4>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+						when an unknown printer took a galley of type and scrambled it to make a type 
+						specimen book. It has survived not only five</p>				
+					</div>
+				</div>
+				
+			</div>
+
+		</div>
+	</div>
+
+
+<hr>
+
+
+<div class="container" id="slide">
+  <h2>Carousel Example</h2>
+  <div id="myCarousel" class="carousel slide"  data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- add caption -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="la.jpg" alt="Los Angeles" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Los Angeles</h3>
+          <p>LA is always so much fun!</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="chicago.jpg" alt="Chicago" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Chicago</h3>
+          <p>Thank you, Chicago!</p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="ny.jpg" alt="New York" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>New York</h3>
+          <p>We love the Big Apple!</p>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<hr>
+
+
+<div class="container" id="filter">
+  <h2>Filterable Table</h2>
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@mail.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@greatstuff.com</td>
+      </tr>
+      <tr>
+        <td>Anja</td>
+        <td>Ravendale</td>
+        <td>a_r@test.com</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul class="list-group" id="myList">
+    <li class="list-group-item">First item</li>
+    <li class="list-group-item">Second item</li>
+    <li class="list-group-item">Third item</li>
+    <li class="list-group-item">Fourth</li>
+  </ul>  
+
+</div>
+
+<div id="band" class="container text-center">
+  <h3>THE BAND</h3>
+  <p><em>We love music!</em></p>
+  <p>We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Name</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo" class="collapse">
+        <p>Guitarist and Lead Vocalist</p>
+        <p>Loves long walks on the beach</p>
+        <p>Member since 1988</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Name</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo2" class="collapse">
+        <p>Drummer</p>
+        <p>Loves drummin'</p>
+        <p>Member since 1988</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Name</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+        <p>Bass player</p>
+        <p>Loves math</p>
+        <p>Member since 2005</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="text-center">
+  <a class="up-arrow" href="#mypage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a></p> 
+</footer>
+
+<script> 
+/* filter스크립트 */
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+    $("#myList li").filter(function() {
+	      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+	    });
+  });
+});
+/* filter스크립트 */
+
+/* 부드러운이동 */
+$(document).ready(function(){  
+  $(".navbar a, footer a[href='#myPage'], .dropdown-menu a, jb-text p").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+/* 부드러운이동 */
+
+
+</script>
+
+	
+</body>
+</html>
